@@ -1,0 +1,12 @@
+PERBANDINGAN DENGAN SISTEM ATLAS
+
+API latihan menggunakan status 404 Not Found untuk resource atau route
+yang tidak ditemukan.
+
+Sementara itu, sistem ATLAS asli memiliki perilaku lama yang
+mengembalikan status 500 dengan pesan "Api tidak tersedia" ketika
+path API yang diakses tidak cocok.
+
+Pada praktikum ini, API latihan tetap menggunakan 404 dan tidak
+diubah menjadi 500. Perbedaan tersebut menunjukkan perbedaan
+penanganan error antara API latihan dan sistem produksi.
