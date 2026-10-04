@@ -35,3 +35,19 @@ Setelah request dikirim, JSONPlaceholder memberikan response berupa data JSON da
 Sedangkan `/posts?userId=1` menggunakan query parameter untuk melakukan filter berdasarkan ID pengguna. Artinya, endpoint tersebut digunakan untuk mengambil postingan yang dibuat oleh pengguna dengan `userId` 1.
 
 Perbedaannya adalah `/posts/1` menghasilkan data berdasarkan ID postingan, sedangkan `/posts?userId=1` menghasilkan data berdasarkan ID pengguna dan dapat mengembalikan beberapa postingan.
+
+## 5. Perbandingan GET, POST, PUT, PATCH, dan DELETE
+
+Pada JSONPlaceholder, setiap HTTP method memiliki fungsi yang berbeda dalam mengakses dan memanipulasi resource.
+
+| Method | Endpoint | Fungsi | Status Code | Perubahan Data |
+|---|---|---|---|---|
+| GET | `/posts/1` | Mengambil data postingan | `200 OK` | Tidak mengubah data |
+| POST | `/posts` | Membuat postingan baru | `201 Created` | Simulasi penambahan data |
+| PUT | `/posts/1` | Memperbarui seluruh data postingan | `200 OK` | Simulasi perubahan data |
+| PATCH | `/posts/1` | Memperbarui sebagian data postingan | `200 OK` | Simulasi perubahan sebagian data |
+| DELETE | `/posts/1` | Menghapus postingan | `200 OK` | Simulasi penghapusan data |
+
+`GET` digunakan untuk mengambil data tanpa mengubah resource. `POST` digunakan untuk membuat resource baru. `PUT` digunakan untuk mengganti atau memperbarui seluruh data resource, sedangkan `PATCH` digunakan untuk memperbarui sebagian data. Sementara itu, `DELETE` digunakan untuk menghapus resource.
+
+JSONPlaceholder merupakan API simulasi sehingga perubahan yang dilakukan menggunakan POST, PUT, PATCH, dan DELETE tidak benar-benar disimpan secara permanen pada database.
